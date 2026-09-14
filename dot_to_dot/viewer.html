@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Winter mystery · 243-dot drawing</title>
+<style>
+:root{color-scheme:light;font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;color:#172b38;background:#f4f2ec}*{box-sizing:border-box}body{margin:0}main{max-width:1440px;margin:auto;padding:32px}header{display:flex;justify-content:space-between;align-items:start;gap:20px}h1{font-size:32px;letter-spacing:-1px;margin:4px 0 12px}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:700;color:#52746c}p{line-height:1.5}.intro{max-width:720px;color:#52616a;margin:0 0 24px}.badge{border:1px solid #c6d2ca;border-radius:24px;padding:9px 14px;font-size:12px;white-space:nowrap;background:#edf2ec}.layout{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:24px}.paper{background:#fff;border:1px solid #d9ddd7;border-radius:4px;box-shadow:0 4px 24px #283c3110;padding:12px;min-width:0}canvas,#source{display:block;width:100%;height:auto;aspect-ratio:1;touch-action:none}#source{object-fit:contain}#source[hidden],canvas[hidden]{display:none}.tabs{display:flex;gap:4px;padding:4px;background:#e7eae3;border-radius:10px;margin-bottom:14px;width:fit-content}button,a.button{font:inherit;cursor:pointer;border:1px solid #c6cfc8;border-radius:7px;padding:10px 13px;background:white;color:#203b34;text-decoration:none;font-size:13px}button:hover{background:#edf3ed}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #dc9956;outline-offset:3px}.tabs button{border:0;background:transparent}.tabs button[aria-pressed=true]{background:white;box-shadow:0 1px 4px #172b3820}.primary{background:#254f42;color:white;border-color:#254f42}.primary:hover{background:#356a57}aside{padding-top:1px}aside section{border-bottom:1px solid #d6ddd3;padding:0 0 22px;margin:0 0 22px}h2{font-size:15px;margin:0 0 14px}.actions{display:flex;flex-wrap:wrap;gap:8px}label.option{display:flex;gap:9px;align-items:center;font-size:13px;margin:14px 0}input[type=checkbox]{accent-color:#254f42}input[type=range]{width:100%;accent-color:#254f42;margin:14px 0}select{padding:7px;border:1px solid #c6cfc8;border-radius:6px;background:white}.muted{color:#607068;font-size:12px;line-height:1.6}.progress{font-variant-numeric:tabular-nums;font-size:30px;letter-spacing:-1px;margin:10px 0}#status{font-size:13px;line-height:1.5;min-height:42px}.links{display:flex;gap:10px;flex-wrap:wrap;font-size:12px}a{color:#315f51}.footnote{font-size:12px;color:#607068;line-height:1.6;margin-top:14px}.legend{display:flex;justify-content:space-between;font-size:11px;color:#607068;padding:8px 4px 0}@media(max-width:850px){main{padding:18px}.layout{grid-template-columns:1fr}aside{display:grid;grid-template-columns:1fr 1fr;gap:20px}h1{font-size:26px}.badge{display:none}}@media(max-width:500px){aside{grid-template-columns:1fr}}@media print{body{background:white}main{padding:0}header,aside,.tabs,.footnote,.legend{display:none}.layout{display:block}.paper{box-shadow:none;border:0;padding:0;width:180mm}canvas{width:180mm}@page{size:A4;margin:15mm}}
+</style>
+</head>
+<body><main>
+<header><div><div class="eyebrow">A winter drawing experiment</div><h1>One dot at a time.</h1><p class="intro">243 numbered points. One continuous path. Connect them in order, then join 243 back to 1.</p></div><div class="badge">Same points · every view</div></header>
+<div class="tabs" aria-label="Artwork view"><button id="puzzleTab" aria-pressed="true">Dot-to-dot</button><button id="answerTab" aria-pressed="false">Connected</button><button id="sourceTab" aria-pressed="false">Source art</button></div>
+<div class="layout"><div><div class="paper"><canvas id="drawing" width="1200" height="1200" aria-label="243 numbered dots, connect in ascending order and close to dot 1"></canvas><img id="source" src="__SOURCE__" alt="Original generated reindeer outline" hidden></div><div class="legend"><span>243 dots · 243 straight segments</span><span id="viewLabel">Unsolved</span></div><p class="footnote">The answer is drawn entirely from the numbered points. There are no extra strokes, hidden outlines, or decoy dots. Grid alignment cannot guarantee that the subject stays secret.</p></div>
+<aside>
+<section><h2>Watch the drawing emerge</h2><div class="actions"><button id="play" class="primary">Animate</button><button id="reset">Reset</button></div><div class="progress"><span id="count">0</span><span style="font-size:14px;color:#607068"> / 243 lines</span></div><input id="progress" aria-label="Drawn line count" type="range" min="0" max="243" step="1" value="0"><label class="option" for="speed">Speed <select id="speed"><option value="6">Slow</option><option value="18" selected>Medium</option><option value="45">Fast</option></select></label><div id="status" role="status">Start at dot 1.</div></section>
+<section><h2>Draw it yourself</h2><label class="option"><input id="manual" type="checkbox">Connect dots by hand</label><p class="muted">Click or drag from dot 1 through the numbered points in order. Only the next dot accepts a line. A wrong dot leaves the drawing unchanged.</p><button id="undo">Undo one line</button></section>
+<section><h2>Inspect the puzzle</h2><label class="option"><input id="labels" type="checkbox" checked>Show numbers</label><label class="option"><input id="grid" type="checkbox">Show alignment grid</label><button id="download">Save current canvas PNG</button><p class="muted">The source tab is a reference only. It is never painted into the puzzle canvas.</p><div class="links"><a href="dots.svg" download>Printable dots</a><a href="connected.svg" download>Connected dots</a><a href="points.json" download>Point data</a></div></section>
+</aside></div>
+</main>
+<script id="puzzleData" type="application/json">__DATA__</script>
+<script>
+'use strict';
+const data=JSON.parse(document.getElementById('puzzleData').textContent);
+const points=data.points, edges=data.edges, total=edges.length;
+const canvas=document.getElementById('drawing'),ctx=canvas.getContext('2d');
+const $=id=>document.getElementById(id);
+let progress=0,playing=false,lastTime=null,frame=null,mode='puzzle',started=false,dragging=false;
+function stop(){playing=false;lastTime=null;if(frame!==null)cancelAnimationFrame(frame);frame=null;$('play').textContent='Animate';}
+function nextIndex(){return Math.floor(progress)%points.length;}
+function render(){
+ ctx.clearRect(0,0,1200,1200);ctx.fillStyle='#fff';ctx.fillRect(0,0,1200,1200);
+ if($('grid').checked){ctx.strokeStyle='#e5e9e5';ctx.lineWidth=.6;ctx.beginPath();for(let p=60;p<=1140;p+=data.grid.spacing){ctx.moveTo(p,60);ctx.lineTo(p,1140);ctx.moveTo(60,p);ctx.lineTo(1140,p);}ctx.stroke();}
+ ctx.lineWidth=2;ctx.strokeStyle='#254f42';ctx.lineCap='round';ctx.lineJoin='round';
+ let rendered=0;
+ for(let i=0;i<Math.ceil(progress)&&i<total;i++){
+  const [a,b]=edges[i].map(id=>points[id-1]);const fraction=Math.min(1,progress-i);
+  if(fraction<=0)break;
+  ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(a.x+(b.x-a.x)*fraction,a.y+(b.y-a.y)*fraction);ctx.stroke();rendered++;
+ }
+ ctx.fillStyle='#17212b';for(const p of points){ctx.beginPath();ctx.arc(p.x,p.y,2.1,0,Math.PI*2);ctx.fill();}
+ if($('labels').checked){ctx.font='11px Arial, sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle='#394553';for(const p of points)ctx.fillText(String(p.id),p.label.x,p.label.y);}
+ if($('manual').checked&&progress<total){const target=started?points[(Math.floor(progress)+1)%points.length]:points[0];ctx.strokeStyle='#b76630';ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(target.x,target.y,7,0,Math.PI*2);ctx.stroke();}
+ $('count').textContent=Math.floor(progress);$('progress').value=Math.floor(progress);
+ $('viewLabel').textContent=progress===0?'Unsolved':progress===total?'Complete':`Drawing · ${Math.floor(progress)} lines`;
+ $('status').textContent=progress===total?'Complete: dot 243 is connected back to 1.':$('manual').checked?(started?`Connect to dot ${(Math.floor(progress)+1)%points.length+1}.`:'Click dot 1 to begin.'):`${Math.floor(progress)} of ${total} lines drawn.`;
+ canvas.dataset.renderedSegments=rendered;
+}
+function setMode(value){mode=value;$('source').hidden=value!=='source';canvas.hidden=value==='source';for(const [id,v] of [['puzzleTab','puzzle'],['answerTab','answer'],['sourceTab','source']])$(id).setAttribute('aria-pressed',String(value===v));}
+function setProgress(value){stop();progress=Math.max(0,Math.min(total,Number(value)));setMode(progress===total?'answer':'puzzle');render();}
+function tick(now){if(!playing)return;if(lastTime!==null)progress=Math.min(total,progress+(now-lastTime)/1000*Number($('speed').value));lastTime=now;render();if(progress>=total){stop();setMode('answer');}else frame=requestAnimationFrame(tick);}
+$('play').onclick=()=>{if(playing){stop();return;}if(progress===total)progress=0;$('manual').checked=false;setMode('puzzle');playing=true;lastTime=null;$('play').textContent='Pause';frame=requestAnimationFrame(tick);};
+$('reset').onclick=()=>{started=false;setProgress(0);};
+$('puzzleTab').onclick=()=>{started=false;setProgress(0);};
+$('answerTab').onclick=()=>setProgress(total);
+$('sourceTab').onclick=()=>{stop();setMode('source');};
+$('progress').oninput=e=>{started=Number(e.target.value)>0;setProgress(e.target.value);};
+$('labels').onchange=render;$('grid').onchange=render;
+$('manual').onchange=()=>{stop();progress=Math.floor(progress);started=progress>0;setMode('puzzle');render();};
+$('undo').onclick=()=>{started=progress>1;setProgress(Math.max(0,Math.ceil(progress)-1));};
+function touchPoint(x,y){if(!$('manual').checked||progress>=total)return false;let target=started?points[(Math.floor(progress)+1)%points.length]:points[0];if(Math.hypot(x-target.x,y-target.y)>10)return false;if(!started)started=true;else progress++;render();return true;}
+function eventPoint(event){const rect=canvas.getBoundingClientRect();return [(event.clientX-rect.left)*1200/rect.width,(event.clientY-rect.top)*1200/rect.height];}
+canvas.addEventListener('pointerdown',event=>{if(!$('manual').checked)return;event.preventDefault();dragging=true;canvas.setPointerCapture(event.pointerId);touchPoint(...eventPoint(event));});
+canvas.addEventListener('pointermove',event=>{if(dragging)touchPoint(...eventPoint(event));});
+canvas.addEventListener('pointerup',()=>dragging=false);canvas.addEventListener('pointercancel',()=>dragging=false);
+$('download').onclick=()=>{const a=document.createElement('a');a.download=`dot-to-dot-${Math.floor(progress)}-lines.png`;a.href=canvas.toDataURL('image/png');a.click();};
+window.dotPuzzle={data,setProgress,touchPoint,get state(){return{progress,playing,mode,started,renderedSegments:Number(canvas.dataset.renderedSegments)};}};
+render();
+</script></body></html>

@@ -1,0 +1,15 @@
+{
+  "day": 18,
+  "printed_dots": 966,
+  "printed_labels": 1932,
+  "original_segments": 213,
+  "short_connections": 331,
+  "max_hop": 3.0,
+  "intermediate_points": 118,
+  "shifted_original_vertices": 0,
+  "shared_real_locations": 44,
+  "lookup_rows": 38,
+  "sudoku_givens": 43,
+  "max_original_hop": 37.21558813185679,
+  "shortest_decoy_choice_pool": 161
+}

@@ -1,0 +1,156 @@
+{
+  "source_chains": 1670,
+  "skeleton_pixels": 78861,
+  "tiles": [
+    {
+      "day": 1,
+      "epsilon": 1.2,
+      "original_vertices": 101,
+      "omitted_segments": 0
+    },
+    {
+      "day": 2,
+      "epsilon": 1.2,
+      "original_vertices": 115,
+      "omitted_segments": 0
+    },
+    {
+      "day": 3,
+      "epsilon": 1.2,
+      "original_vertices": 85,
+      "omitted_segments": 0
+    },
+    {
+      "day": 4,
+      "epsilon": 1.2,
+      "original_vertices": 189,
+      "omitted_segments": 0
+    },
+    {
+      "day": 5,
+      "epsilon": 1.2,
+      "original_vertices": 219,
+      "omitted_segments": 0
+    },
+    {
+      "day": 6,
+      "epsilon": 1.2,
+      "original_vertices": 199,
+      "omitted_segments": 0
+    },
+    {
+      "day": 7,
+      "epsilon": 2.6,
+      "original_vertices": 234,
+      "omitted_segments": 0
+    },
+    {
+      "day": 8,
+      "epsilon": 1.8,
+      "original_vertices": 211,
+      "omitted_segments": 0
+    },
+    {
+      "day": 9,
+      "epsilon": 1.2,
+      "original_vertices": 221,
+      "omitted_segments": 0
+    },
+    {
+      "day": 10,
+      "epsilon": 1.2,
+      "original_vertices": 186,
+      "omitted_segments": 0
+    },
+    {
+      "day": 11,
+      "epsilon": 1.2,
+      "original_vertices": 217,
+      "omitted_segments": 0
+    },
+    {
+      "day": 12,
+      "epsilon": 1.2,
+      "original_vertices": 217,
+      "omitted_segments": 0
+    },
+    {
+      "day": 13,
+      "epsilon": 1.2,
+      "original_vertices": 100,
+      "omitted_segments": 0
+    },
+    {
+      "day": 14,
+      "epsilon": 1.2,
+      "original_vertices": 192,
+      "omitted_segments": 0
+    },
+    {
+      "day": 15,
+      "epsilon": 1.2,
+      "original_vertices": 82,
+      "omitted_segments": 0
+    },
+    {
+      "day": 16,
+      "epsilon": 1.2,
+      "original_vertices": 166,
+      "omitted_segments": 0
+    },
+    {
+      "day": 17,
+      "epsilon": 1.2,
+      "original_vertices": 240,
+      "omitted_segments": 0
+    },
+    {
+      "day": 18,
+      "epsilon": 1.2,
+      "original_vertices": 219,
+      "omitted_segments": 0
+    },
+    {
+      "day": 19,
+      "epsilon": 1.2,
+      "original_vertices": 188,
+      "omitted_segments": 0
+    },
+    {
+      "day": 20,
+      "epsilon": 1.2,
+      "original_vertices": 132,
+      "omitted_segments": 0
+    },
+    {
+      "day": 21,
+      "epsilon": 1.2,
+      "original_vertices": 112,
+      "omitted_segments": 0
+    },
+    {
+      "day": 22,
+      "epsilon": 1.2,
+      "original_vertices": 180,
+      "omitted_segments": 0
+    },
+    {
+      "day": 23,
+      "epsilon": 1.2,
+      "original_vertices": 231,
+      "omitted_segments": 0
+    },
+    {
+      "day": 24,
+      "epsilon": 1.2,
+      "original_vertices": 176,
+      "omitted_segments": 0
+    },
+    {
+      "day": 25,
+      "epsilon": 1.2,
+      "original_vertices": 220,
+      "omitted_segments": 0
+    }
+  ]
+}

@@ -1,0 +1,367 @@
+{
+  "note": "Colour variety is a screening metric, not proof of recognisability. Substantial means at least 3 of 81 cells.",
+  "min_distinct_colours": 1,
+  "min_substantial_colours": 1,
+  "max_dominant_fraction": 1.0,
+  "days_with_fewer_than_4_substantial_colours": [
+    1,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    17,
+    21,
+    23,
+    24,
+    25
+  ],
+  "days": [
+    {
+      "day": 1,
+      "distinct_colours": 3,
+      "colours_with_at_least_3_cells": 1,
+      "dominant_colour_cells": 79,
+      "dominant_colour_fraction": 0.9753,
+      "counts": {
+        "C02": 79,
+        "C03": 1,
+        "C11": 1
+      }
+    },
+    {
+      "day": 2,
+      "distinct_colours": 6,
+      "colours_with_at_least_3_cells": 4,
+      "dominant_colour_cells": 50,
+      "dominant_colour_fraction": 0.6173,
+      "counts": {
+        "C01": 1,
+        "C02": 50,
+        "C04": 8,
+        "C06": 11,
+        "C10": 2,
+        "C11": 9
+      }
+    },
+    {
+      "day": 3,
+      "distinct_colours": 3,
+      "colours_with_at_least_3_cells": 1,
+      "dominant_colour_cells": 79,
+      "dominant_colour_fraction": 0.9753,
+      "counts": {
+        "C02": 79,
+        "C03": 1,
+        "C09": 1
+      }
+    },
+    {
+      "day": 4,
+      "distinct_colours": 2,
+      "colours_with_at_least_3_cells": 1,
+      "dominant_colour_cells": 79,
+      "dominant_colour_fraction": 0.9753,
+      "counts": {
+        "C02": 79,
+        "C03": 2
+      }
+    },
+    {
+      "day": 5,
+      "distinct_colours": 1,
+      "colours_with_at_least_3_cells": 1,
+      "dominant_colour_cells": 81,
+      "dominant_colour_fraction": 1.0,
+      "counts": {
+        "C02": 81
+      }
+    },
+    {
+      "day": 6,
+      "distinct_colours": 5,
+      "colours_with_at_least_3_cells": 3,
+      "dominant_colour_cells": 71,
+      "dominant_colour_fraction": 0.8765,
+      "counts": {
+        "C01": 3,
+        "C02": 71,
+        "C04": 5,
+        "C09": 1,
+        "C10": 1
+      }
+    },
+    {
+      "day": 7,
+      "distinct_colours": 5,
+      "colours_with_at_least_3_cells": 5,
+      "dominant_colour_cells": 50,
+      "dominant_colour_fraction": 0.6173,
+      "counts": {
+        "C02": 6,
+        "C04": 50,
+        "C05": 14,
+        "C08": 7,
+        "C12": 4
+      }
+    },
+    {
+      "day": 8,
+      "distinct_colours": 3,
+      "colours_with_at_least_3_cells": 2,
+      "dominant_colour_cells": 77,
+      "dominant_colour_fraction": 0.9506,
+      "counts": {
+        "C01": 1,
+        "C02": 77,
+        "C04": 3
+      }
+    },
+    {
+      "day": 9,
+      "distinct_colours": 3,
+      "colours_with_at_least_3_cells": 1,
+      "dominant_colour_cells": 79,
+      "dominant_colour_fraction": 0.9753,
+      "counts": {
+        "C02": 79,
+        "C09": 1,
+        "C11": 1
+      }
+    },
+    {
+      "day": 10,
+      "distinct_colours": 4,
+      "colours_with_at_least_3_cells": 1,
+      "dominant_colour_cells": 76,
+      "dominant_colour_fraction": 0.9383,
+      "counts": {
+        "C02": 76,
+        "C03": 2,
+        "C09": 1,
+        "C11": 2
+      }
+    },
+    {
+      "day": 11,
+      "distinct_colours": 7,
+      "colours_with_at_least_3_cells": 5,
+      "dominant_colour_cells": 41,
+      "dominant_colour_fraction": 0.5062,
+      "counts": {
+        "C01": 2,
+        "C02": 41,
+        "C04": 23,
+        "C05": 6,
+        "C09": 3,
+        "C10": 4,
+        "C11": 2
+      }
+    },
+    {
+      "day": 12,
+      "distinct_colours": 6,
+      "colours_with_at_least_3_cells": 4,
+      "dominant_colour_cells": 48,
+      "dominant_colour_fraction": 0.5926,
+      "counts": {
+        "C04": 48,
+        "C05": 23,
+        "C06": 1,
+        "C07": 5,
+        "C09": 1,
+        "C11": 3
+      }
+    },
+    {
+      "day": 13,
+      "distinct_colours": 8,
+      "colours_with_at_least_3_cells": 4,
+      "dominant_colour_cells": 45,
+      "dominant_colour_fraction": 0.5556,
+      "counts": {
+        "C01": 1,
+        "C02": 45,
+        "C03": 3,
+        "C04": 20,
+        "C05": 1,
+        "C07": 2,
+        "C10": 7,
+        "C11": 2
+      }
+    },
+    {
+      "day": 14,
+      "distinct_colours": 5,
+      "colours_with_at_least_3_cells": 5,
+      "dominant_colour_cells": 51,
+      "dominant_colour_fraction": 0.6296,
+      "counts": {
+        "C00": 10,
+        "C02": 51,
+        "C03": 9,
+        "C08": 4,
+        "C09": 7
+      }
+    },
+    {
+      "day": 15,
+      "distinct_colours": 7,
+      "colours_with_at_least_3_cells": 6,
+      "dominant_colour_cells": 51,
+      "dominant_colour_fraction": 0.6296,
+      "counts": {
+        "C00": 3,
+        "C02": 51,
+        "C03": 9,
+        "C09": 6,
+        "C10": 1,
+        "C11": 6,
+        "C12": 5
+      }
+    },
+    {
+      "day": 16,
+      "distinct_colours": 8,
+      "colours_with_at_least_3_cells": 7,
+      "dominant_colour_cells": 39,
+      "dominant_colour_fraction": 0.4815,
+      "counts": {
+        "C00": 4,
+        "C01": 2,
+        "C02": 15,
+        "C04": 39,
+        "C05": 7,
+        "C09": 6,
+        "C10": 3,
+        "C11": 5
+      }
+    },
+    {
+      "day": 17,
+      "distinct_colours": 5,
+      "colours_with_at_least_3_cells": 3,
+      "dominant_colour_cells": 61,
+      "dominant_colour_fraction": 0.7531,
+      "counts": {
+        "C04": 61,
+        "C05": 14,
+        "C08": 2,
+        "C09": 1,
+        "C11": 3
+      }
+    },
+    {
+      "day": 18,
+      "distinct_colours": 12,
+      "colours_with_at_least_3_cells": 7,
+      "dominant_colour_cells": 25,
+      "dominant_colour_fraction": 0.3086,
+      "counts": {
+        "C00": 5,
+        "C01": 2,
+        "C02": 9,
+        "C03": 15,
+        "C04": 25,
+        "C05": 7,
+        "C07": 1,
+        "C08": 9,
+        "C09": 1,
+        "C10": 1,
+        "C11": 4,
+        "C12": 2
+      }
+    },
+    {
+      "day": 19,
+      "distinct_colours": 8,
+      "colours_with_at_least_3_cells": 6,
+      "dominant_colour_cells": 40,
+      "dominant_colour_fraction": 0.4938,
+      "counts": {
+        "C00": 9,
+        "C03": 6,
+        "C05": 2,
+        "C06": 5,
+        "C07": 2,
+        "C08": 40,
+        "C09": 10,
+        "C12": 7
+      }
+    },
+    {
+      "day": 20,
+      "distinct_colours": 7,
+      "colours_with_at_least_3_cells": 6,
+      "dominant_colour_cells": 25,
+      "dominant_colour_fraction": 0.3086,
+      "counts": {
+        "C00": 23,
+        "C02": 3,
+        "C03": 25,
+        "C06": 4,
+        "C07": 2,
+        "C08": 17,
+        "C09": 7
+      }
+    },
+    {
+      "day": 21,
+      "distinct_colours": 2,
+      "colours_with_at_least_3_cells": 2,
+      "dominant_colour_cells": 77,
+      "dominant_colour_fraction": 0.9506,
+      "counts": {
+        "C00": 77,
+        "C11": 4
+      }
+    },
+    {
+      "day": 22,
+      "distinct_colours": 4,
+      "colours_with_at_least_3_cells": 4,
+      "dominant_colour_cells": 54,
+      "dominant_colour_fraction": 0.6667,
+      "counts": {
+        "C00": 54,
+        "C09": 9,
+        "C11": 6,
+        "C12": 12
+      }
+    },
+    {
+      "day": 23,
+      "distinct_colours": 3,
+      "colours_with_at_least_3_cells": 2,
+      "dominant_colour_cells": 77,
+      "dominant_colour_fraction": 0.9506,
+      "counts": {
+        "C00": 77,
+        "C09": 1,
+        "C11": 3
+      }
+    },
+    {
+      "day": 24,
+      "distinct_colours": 1,
+      "colours_with_at_least_3_cells": 1,
+      "dominant_colour_cells": 81,
+      "dominant_colour_fraction": 1.0,
+      "counts": {
+        "C00": 81
+      }
+    },
+    {
+      "day": 25,
+      "distinct_colours": 1,
+      "colours_with_at_least_3_cells": 1,
+      "dominant_colour_cells": 81,
+      "dominant_colour_fraction": 1.0,
+      "counts": {
+        "C00": 81
+      }
+    }
+  ]
+}

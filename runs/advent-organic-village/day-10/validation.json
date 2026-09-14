@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "points": 243,
+  "segments": 199,
+  "strokes": 72,
+  "pen_lifts": 71,
+  "minimum_dot_spacing": 10.0,
+  "all_points_used": true,
+  "phantom_connectors": 0,
+  "label_overlap_pairs": [],
+  "original_vertices": 243,
+  "subdivided_segments": 0,
+  "omitted_segments": 192
+}

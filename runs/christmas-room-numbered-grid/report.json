@@ -1,0 +1,13 @@
+{
+  "day": 18,
+  "grid_size": 61,
+  "printed_dots": 3721,
+  "real_instructions": 38,
+  "real_segments": 213,
+  "real_dot_visits": 251,
+  "moved_visits": 44,
+  "max_move_in_grid_steps": 1.4142135623730951,
+  "wrong_answer_paths": 304,
+  "sudoku_givens": 33,
+  "sudoku_solutions": 1
+}

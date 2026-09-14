@@ -1,0 +1,23 @@
+{
+  "unit_tests": 21,
+  "unit_test_status": "passed",
+  "browser_status": "passed",
+  "browser_days_tested": [
+    1,
+    13,
+    25
+  ],
+  "pdf_page_counts": {
+    "puzzles": 25,
+    "stroke-guides": 25,
+    "solutions": 25,
+    "assembly": 1
+  },
+  "visual_review": [
+    "assembled vector scene",
+    "day 13 numbered dots",
+    "calendar browser screenshot",
+    "middle puzzle and stroke-guide PDF pages"
+  ],
+  "concealment_blind_review": "pending human review"
+}

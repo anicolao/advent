@@ -1,0 +1,477 @@
+{
+  "schema_version": 1,
+  "palettes": [
+    {
+      "schema_version": 1,
+      "id": "frixion",
+      "name": "Pilot FriXion Fineliner",
+      "colour_space": "sRGB",
+      "order": "left-to-right in source photograph",
+      "source": "frixion.png",
+      "source_sha256": "ebd0a9fc3bfda9201bad7b9ec24efbbc6982d58f0b5eb5971074a60b6e14a15b",
+      "source_dimensions": [
+        1600,
+        1561
+      ],
+      "extraction": {
+        "method": "per-channel median of manually selected rectangular samples",
+        "region": "Coloured barrels below the caps, away from lettering and silver bands",
+        "box_convention": "[left, top, right, bottom], right/bottom exclusive",
+        "colour_management": "Embedded ICC profile converted to sRGB with Pillow ImageCms; no exposure or saturation adjustment",
+        "note": "Photographed plastic colours, not calibrated ink measurements. Names are descriptive, not verified manufacturer names."
+      },
+      "colours": [
+        {
+          "id": "C01",
+          "position": 1,
+          "name": "Red",
+          "hex": "#BA4746",
+          "rgb": [
+            186,
+            71,
+            70
+          ],
+          "sample_box_xyxy": [
+            73,
+            615,
+            97,
+            645
+          ]
+        },
+        {
+          "id": "C02",
+          "position": 2,
+          "name": "Pink",
+          "hex": "#D57196",
+          "rgb": [
+            213,
+            113,
+            150
+          ],
+          "sample_box_xyxy": [
+            197,
+            615,
+            221,
+            645
+          ]
+        },
+        {
+          "id": "C03",
+          "position": 3,
+          "name": "Coral pink",
+          "hex": "#E29E9D",
+          "rgb": [
+            226,
+            158,
+            157
+          ],
+          "sample_box_xyxy": [
+            322,
+            615,
+            346,
+            645
+          ]
+        },
+        {
+          "id": "C04",
+          "position": 4,
+          "name": "Orange",
+          "hex": "#E08839",
+          "rgb": [
+            224,
+            136,
+            57
+          ],
+          "sample_box_xyxy": [
+            446,
+            615,
+            470,
+            645
+          ]
+        },
+        {
+          "id": "C05",
+          "position": 5,
+          "name": "Yellow",
+          "hex": "#E9CF01",
+          "rgb": [
+            233,
+            207,
+            1
+          ],
+          "sample_box_xyxy": [
+            568,
+            615,
+            592,
+            645
+          ]
+        },
+        {
+          "id": "C06",
+          "position": 6,
+          "name": "Lime green",
+          "hex": "#ADCD05",
+          "rgb": [
+            173,
+            205,
+            5
+          ],
+          "sample_box_xyxy": [
+            692,
+            615,
+            716,
+            645
+          ]
+        },
+        {
+          "id": "C07",
+          "position": 7,
+          "name": "Green",
+          "hex": "#009370",
+          "rgb": [
+            0,
+            147,
+            112
+          ],
+          "sample_box_xyxy": [
+            819,
+            615,
+            843,
+            645
+          ]
+        },
+        {
+          "id": "C08",
+          "position": 8,
+          "name": "Light blue",
+          "hex": "#44AEBE",
+          "rgb": [
+            68,
+            174,
+            190
+          ],
+          "sample_box_xyxy": [
+            945,
+            615,
+            969,
+            645
+          ]
+        },
+        {
+          "id": "C09",
+          "position": 9,
+          "name": "Blue",
+          "hex": "#3544AD",
+          "rgb": [
+            53,
+            68,
+            173
+          ],
+          "sample_box_xyxy": [
+            1071,
+            615,
+            1095,
+            645
+          ]
+        },
+        {
+          "id": "C10",
+          "position": 10,
+          "name": "Purple",
+          "hex": "#604698",
+          "rgb": [
+            96,
+            70,
+            152
+          ],
+          "sample_box_xyxy": [
+            1198,
+            615,
+            1222,
+            645
+          ]
+        },
+        {
+          "id": "C11",
+          "position": 11,
+          "name": "Brown",
+          "hex": "#4B4846",
+          "rgb": [
+            75,
+            72,
+            70
+          ],
+          "sample_box_xyxy": [
+            1325,
+            615,
+            1349,
+            645
+          ]
+        },
+        {
+          "id": "C12",
+          "position": 12,
+          "name": "Black",
+          "hex": "#323E45",
+          "rgb": [
+            50,
+            62,
+            69
+          ],
+          "sample_box_xyxy": [
+            1452,
+            615,
+            1476,
+            645
+          ]
+        }
+      ],
+      "additional_mosaic_colour": {
+        "id": "C00",
+        "name": "White",
+        "hex": "#FFFFFF",
+        "rgb": [
+          255,
+          255,
+          255
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "id": "clickart",
+      "name": "Zebra ClickArt",
+      "colour_space": "sRGB",
+      "order": "left-to-right in source photograph",
+      "source": "clickart.png",
+      "source_sha256": "6a0d4379e91f7903cfa38d8c09c6282ab925487a45a3d3e4b586605fee4f5ef4",
+      "source_dimensions": [
+        1349,
+        1600
+      ],
+      "extraction": {
+        "method": "per-channel median of manually selected rectangular samples",
+        "region": "Coloured push-buttons above the white barrels, below the glare band",
+        "box_convention": "[left, top, right, bottom], right/bottom exclusive",
+        "colour_management": "Embedded ICC profile converted to sRGB with Pillow ImageCms; no exposure or saturation adjustment",
+        "note": "Photographed plastic colours, not calibrated ink measurements. Names are descriptive, not verified manufacturer names."
+      },
+      "colours": [
+        {
+          "id": "C01",
+          "position": 1,
+          "name": "Black",
+          "hex": "#07111B",
+          "rgb": [
+            7,
+            17,
+            27
+          ],
+          "sample_box_xyxy": [
+            84,
+            115,
+            104,
+            155
+          ]
+        },
+        {
+          "id": "C02",
+          "position": 2,
+          "name": "Blue",
+          "hex": "#01004E",
+          "rgb": [
+            1,
+            0,
+            78
+          ],
+          "sample_box_xyxy": [
+            188,
+            115,
+            208,
+            155
+          ]
+        },
+        {
+          "id": "C03",
+          "position": 3,
+          "name": "Light blue",
+          "hex": "#005EA3",
+          "rgb": [
+            0,
+            94,
+            163
+          ],
+          "sample_box_xyxy": [
+            296,
+            115,
+            316,
+            155
+          ]
+        },
+        {
+          "id": "C04",
+          "position": 4,
+          "name": "Green",
+          "hex": "#004417",
+          "rgb": [
+            0,
+            68,
+            23
+          ],
+          "sample_box_xyxy": [
+            410,
+            115,
+            430,
+            155
+          ]
+        },
+        {
+          "id": "C05",
+          "position": 5,
+          "name": "Lime green",
+          "hex": "#568A00",
+          "rgb": [
+            86,
+            138,
+            0
+          ],
+          "sample_box_xyxy": [
+            516,
+            115,
+            536,
+            155
+          ]
+        },
+        {
+          "id": "C06",
+          "position": 6,
+          "name": "Yellow",
+          "hex": "#B09100",
+          "rgb": [
+            176,
+            145,
+            0
+          ],
+          "sample_box_xyxy": [
+            631,
+            115,
+            651,
+            155
+          ]
+        },
+        {
+          "id": "C07",
+          "position": 7,
+          "name": "Orange",
+          "hex": "#B54600",
+          "rgb": [
+            181,
+            70,
+            0
+          ],
+          "sample_box_xyxy": [
+            740,
+            115,
+            760,
+            155
+          ]
+        },
+        {
+          "id": "C08",
+          "position": 8,
+          "name": "Red",
+          "hex": "#7B010D",
+          "rgb": [
+            123,
+            1,
+            13
+          ],
+          "sample_box_xyxy": [
+            840,
+            115,
+            860,
+            155
+          ]
+        },
+        {
+          "id": "C09",
+          "position": 9,
+          "name": "Pink",
+          "hex": "#AC436C",
+          "rgb": [
+            172,
+            67,
+            108
+          ],
+          "sample_box_xyxy": [
+            955,
+            115,
+            975,
+            155
+          ]
+        },
+        {
+          "id": "C10",
+          "position": 10,
+          "name": "Purple",
+          "hex": "#060145",
+          "rgb": [
+            6,
+            1,
+            69
+          ],
+          "sample_box_xyxy": [
+            1054,
+            115,
+            1074,
+            155
+          ]
+        },
+        {
+          "id": "C11",
+          "position": 11,
+          "name": "Grey",
+          "hex": "#2E3436",
+          "rgb": [
+            46,
+            52,
+            54
+          ],
+          "sample_box_xyxy": [
+            1169,
+            115,
+            1189,
+            155
+          ]
+        },
+        {
+          "id": "C12",
+          "position": 12,
+          "name": "Brown",
+          "hex": "#2D1912",
+          "rgb": [
+            45,
+            25,
+            18
+          ],
+          "sample_box_xyxy": [
+            1275,
+            115,
+            1295,
+            155
+          ]
+        }
+      ],
+      "additional_mosaic_colour": {
+        "id": "C00",
+        "name": "White",
+        "hex": "#FFFFFF",
+        "rgb": [
+          255,
+          255,
+          255
+        ]
+      }
+    }
+  ]
+}

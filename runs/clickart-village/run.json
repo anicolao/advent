@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-09T08:04:42.327169+00:00",
+  "generation": {
+    "tool": "built-in image_gen",
+    "model": null,
+    "seed": null,
+    "cost": null,
+    "recorded_at": "2026-09-09T08:04:38.739325+00:00",
+    "prompt": "Use case: illustration-story. Create ONE cohesive square scene: a bustling snowy Christmas market village seen from a slightly elevated storybook viewpoint. Intended final image is an extremely low resolution 45 by 45 pixel mosaic divided invisibly into twenty-five 9 by 9 building tiles. The result MUST read as a single connected scene, not a quilt, icon sheet, collage or grid. NO panels, background squares, borders, grid lines, labels or lettering. All objects share one continuous ground plane, perspective and lighting.\nComposition: densely fill the whole canvas with a charming Christmas village. Along the very top edge, a close row of large colourful peaked rooftops, snowy eaves, chimneys and warmly lit windows; almost no empty sky. In the middle, three chunky red and green market stalls beneath those houses, with striped awnings, glowing yellow windows and oversized wrapped presents. A winding blue-shadowed snowy lane connects the stalls from upper centre to lower right. On the left foreground a broad decorated evergreen Christmas tree with large red and yellow ornaments, occupying roughly one third of picture width and half its height; keep visible neighbours alongside it. Lower centre a small warmly lit red kiosk; lower right a simple snowman with red scarf and a large sled loaded with green and pink parcels. Oversized holly garlands and yellow lanterns link neighbouring stalls. Crop peripheral houses at canvas edges to fill the frame naturally. No empty snowfield at bottom or sky strip at top. Spread colourful meaningful architecture, foliage, windows, awnings and parcels throughout all five horizontal and vertical bands. A daily ninth-by-ninth patch should usually show a substantial window, roof/awning, tree decoration, lantern or parcel. Objects may cross the invisible daily tile boundaries; do not arrange 25 isolated icons.\nStyle: extremely chunky low-resolution pixel-art composition with solid flat colours and bold simplified stepped silhouettes. Design as if drawing on a REAL 45x45 grid, with no detail narrower than one forty-fifth of the full width and key features at least 3-5 logical pixels across. Use only a handful of large objects, not dozens of tiny detailed buildings. No texture, gradients, realism, outlines thinner than one logical pixel, speckled snowfall, tiny faces or writing. Prioritise scene coherence AND distributing colour across the canvas. Bright contrasts between adjoining buildings, white roof snow and dark roofs, yellow windows on dark walls. Palette guide: White #FFFFFF, Black #07111B, Blue #01004E, Light blue #005EA3, Green #004417, Lime green #568A00, Yellow #B09100, Orange #B54600, Red #7B010D, Pink #AC436C, Purple #060145, Grey #2E3436, Brown #2D1912.",
+    "source_filename": "clickart-village.png",
+    "requested_options": {
+      "composition": "One continuous dense Christmas market scene, no panels"
+    }
+  },
+  "source_filename": "source.png",
+  "source_sha256": "f413308ebde9201df25059770aa794bf66cf18919c2a09707045722391defa1e",
+  "settings": {
+    "resampling": "NEAREST",
+    "quantization": "squared encoded-sRGB distance",
+    "tie_break": "palette order",
+    "dithering": false,
+    "centre_crop": false
+  },
+  "normalization": {
+    "colour_management": "Untagged image assumed sRGB",
+    "crop_box": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "oriented_source_size": [
+      1254,
+      1254
+    ]
+  },
+  "dependencies": {
+    "python": "3.14.7",
+    "pillow": "12.3.0"
+  },
+  "validation": {
+    "status": "passed",
+    "cells": 2025,
+    "tiles": 25,
+    "colours_used": 13,
+    "checks": [
+      "canonical PNG and palette",
+      "JSON reconstruction",
+      "tile reassembly",
+      "inventories",
+      "exact preview",
+      "source hash",
+      "intermediate images",
+      "deterministic reconversion"
+    ]
+  },
+  "processing_seconds": 0.5853
+}

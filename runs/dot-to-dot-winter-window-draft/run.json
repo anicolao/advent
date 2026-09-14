@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-09-09T15:52:24.760669+00:00",
+  "validation": {
+    "status": "passed",
+    "points": 243,
+    "segments": 277,
+    "strokes": 50,
+    "pen_lifts": 49,
+    "minimum_dot_spacing": 5.0,
+    "all_points_used": true,
+    "phantom_connectors": 0
+  },
+  "label_overlap_pairs": [],
+  "source": "Authored straight-line adaptation of generated winter-window reference; artwork.json is the final vector source",
+  "generated_reference_sha256": "4fa025eb94f808ec5175395ddbae1c4a0ddea28bba18a9ec5979cc6a7651754b",
+  "source_generator": "built-in image_gen",
+  "prompt": "Use case: illustration-story. Source art for an intricate ADULT connect-the-dots puzzle, with multiple pen lifts allowed. Create a beautiful square stained-glass-style LINE DRAWING of a watchful owl perched on a diagonal branch amid overlapping winter pine boughs, with a small crescent moon and distant angular mountain peaks. Fill the whole square composition with purposeful geometric structure, including the background; no isolated animal silhouette surrounded by blank paper. The owl has large expressive almond eyes, a small diamond beak, symmetrical geometric face feathers, folded wings with several large angular feather panels, and feet gripping the branch. Background diagonal branches and mountain planes cross behind the owl and distribute lines over every part of the page. A mature elegant graphic art composition, not a children's cartoon. Black thin uniform linework on pure white. Predominantly straight segments and angular contours with clear sparse corners. The drawing should have roughly 180-220 meaningful vertices/junctions so it can be represented with 243 dots: detailed enough to reward an adult, but no microscopic detail, no tiny feather hatching, no shading, no grey, no black filled regions, no textures, no circles made from dozens of tiny segments. Avoid many dense lines meeting in a small area. Connected shared junctions are welcome, and separate interior details are welcome. A thin square frame around the composition, with an 8 percent white margin outside it. Every visible line is intended to be reconstructed from straight dot-to-dot segments. Do not include any dots, labels, numbers, letters, logos, or text. The eventual dot layout should fill a rectangle and should not trace the owl's outer silhouette preferentially. Flat high-contrast production line art only.\n",
+  "note": "No automatically sampled silhouette points, no filler dots, no forced uniform grid. Concealment requires human review."
+}

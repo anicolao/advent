@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-09T07:37:04.299371+00:00",
+  "generation": {
+    "tool": "built-in image_gen",
+    "model": null,
+    "seed": null,
+    "cost": null,
+    "recorded_at": "2026-09-09T07:35:59.308994+00:00",
+    "prompt": "Use case: illustration-story. Create a square flat-colour Christmas illustration for an advent calendar mosaic that will be reduced to exactly 45 by 45 cells. A large decorated evergreen Christmas tree on the left, a smaller red cabin with a bright yellow window on the right, a broad white snowy foreground and a dark blue winter sky. A simple yellow star tops the tree. Tree dominant, cabin secondary, both comfortably inside frame. Use bold stepped silhouettes, very few large solid shapes, strong contrast, simple pixel-art-inspired composition. Important details should occupy several cells at the final 45-pixel scale. A handful of large ornaments only. No gradients, texture, tiny speckles, text, numbers, grid lines, borders, tile mockups or perspective. Flat artwork fills the square. Use these exact colours as a guide (downstream code enforces them): White #FFFFFF, Red #BA4746, Pink #D57196, Coral pink #E29E9D, Orange #E08839, Yellow #E9CF01, Lime green #ADCD05, Green #009370, Light blue #44AEBE, Blue #3544AD, Purple #604698, Brown #4B4846, Black #323E45.",
+    "source_filename": "frixion.png",
+    "requested_options": {
+      "format": "square, flat-colour Christmas illustration"
+    }
+  },
+  "source_filename": "source.png",
+  "source_sha256": "ce18889b5a5a00d248b5ffaf84caf678bf98e7cc1ebe883b59f264a0517a88c6",
+  "settings": {
+    "resampling": "BOX",
+    "quantization": "squared encoded-sRGB distance",
+    "tie_break": "palette order",
+    "dithering": false,
+    "centre_crop": false
+  },
+  "normalization": {
+    "colour_management": "Untagged image assumed sRGB",
+    "crop_box": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "oriented_source_size": [
+      1254,
+      1254
+    ]
+  },
+  "dependencies": {
+    "python": "3.14.7",
+    "pillow": "12.3.0"
+  },
+  "validation": {
+    "status": "passed",
+    "cells": 2025,
+    "tiles": 25,
+    "colours_used": 13,
+    "checks": [
+      "canonical PNG and palette",
+      "JSON reconstruction",
+      "tile reassembly",
+      "inventories",
+      "exact preview",
+      "source hash",
+      "intermediate images",
+      "deterministic reconversion"
+    ]
+  },
+  "processing_seconds": 0.5435
+}

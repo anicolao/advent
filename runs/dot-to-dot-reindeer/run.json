@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-09-09T15:10:54.028229+00:00",
+  "source_sha256": "6fdabd598f9b9983cf83a3476063a8a56925f92f4cc680863cb3300b0bc38b8b",
+  "source_generation": {
+    "tool": "built-in image_gen",
+    "model": null,
+    "prompt": "Use case: illustration-story. Create source line art for a numbered connect-the-dots Christmas puzzle. ONE SINGLE CLOSED OUTER CONTOUR of a graceful standing reindeer viewed in side profile, head turned slightly upward toward the right, elaborate but broad branching antlers spreading over the upper half of the page, four clearly separated legs with simple hooves below, a gently curved back and chest and a small lifted tail. A charming elegant animal silhouette, recognisable after connecting straight segments. Composition fills a square page with generous 8% white margins, antlers spread widely to distribute the contour over the page. Use a clean uniform thin black outline on pure white, white inside the animal. VERY IMPORTANT: exactly one continuous closed outline, no detached marks and no interior lines whatsoever: no eye, no nose dot, no fur texture, no shading, no collar, no harness, no ground line, no snowflakes, no words, no dots or numbers. Antler branches and legs have enough width and separation to fit distinct dot positions on both sides of their contours. This is a flat tracing template, not a mockup. Do not make a solid black silhouette. Keep smooth elegant curves and a readable reindeer shape, with about 12-16 antler tips and broad negative spaces between limbs and antlers.\n"
+  },
+  "extraction": {
+    "threshold": 160,
+    "external_contours": 1,
+    "extraction": "Largest external contour; interior strokes are not part of the puzzle",
+    "source_to_canvas_scale": 0.873215785054576
+  },
+  "approximation_epsilon": 6.978587094096138,
+  "grid": {
+    "spacing": 18.0,
+    "origin": [
+      60,
+      60
+    ],
+    "strength": 1,
+    "mean_displacement": 6.688680748634495,
+    "max_displacement": 12.574871543307623
+  },
+  "validation": {
+    "status": "passed",
+    "points": 243,
+    "segments": 243,
+    "closed": true,
+    "crossings": 0,
+    "minimum_dot_spacing": 18.0
+  },
+  "label_overlap_pairs": [],
+  "camouflage": "Near-grid alignment only; silhouette may still be recognisable. No decoy dots."
+}

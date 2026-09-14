@@ -1,0 +1,377 @@
+{
+  "note": "Colour variety is a screening metric, not proof of recognisability. Substantial means at least 3 of 81 cells.",
+  "min_distinct_colours": 3,
+  "min_substantial_colours": 2,
+  "max_dominant_fraction": 0.9012,
+  "days_with_fewer_than_4_substantial_colours": [
+    1,
+    2,
+    3,
+    9,
+    13,
+    16,
+    21,
+    24
+  ],
+  "days": [
+    {
+      "day": 1,
+      "distinct_colours": 5,
+      "colours_with_at_least_3_cells": 3,
+      "dominant_colour_cells": 48,
+      "dominant_colour_fraction": 0.5926,
+      "counts": {
+        "C01": 1,
+        "C02": 48,
+        "C06": 16,
+        "C07": 14,
+        "C10": 2
+      }
+    },
+    {
+      "day": 2,
+      "distinct_colours": 5,
+      "colours_with_at_least_3_cells": 3,
+      "dominant_colour_cells": 56,
+      "dominant_colour_fraction": 0.6914,
+      "counts": {
+        "C04": 56,
+        "C05": 16,
+        "C06": 1,
+        "C08": 7,
+        "C12": 1
+      }
+    },
+    {
+      "day": 3,
+      "distinct_colours": 4,
+      "colours_with_at_least_3_cells": 2,
+      "dominant_colour_cells": 73,
+      "dominant_colour_fraction": 0.9012,
+      "counts": {
+        "C00": 73,
+        "C07": 4,
+        "C08": 2,
+        "C12": 2
+      }
+    },
+    {
+      "day": 4,
+      "distinct_colours": 8,
+      "colours_with_at_least_3_cells": 4,
+      "dominant_colour_cells": 52,
+      "dominant_colour_fraction": 0.642,
+      "counts": {
+        "C00": 10,
+        "C04": 3,
+        "C05": 1,
+        "C06": 1,
+        "C07": 10,
+        "C08": 52,
+        "C09": 2,
+        "C12": 2
+      }
+    },
+    {
+      "day": 5,
+      "distinct_colours": 5,
+      "colours_with_at_least_3_cells": 4,
+      "dominant_colour_cells": 49,
+      "dominant_colour_fraction": 0.6049,
+      "counts": {
+        "C01": 1,
+        "C06": 18,
+        "C07": 5,
+        "C08": 8,
+        "C09": 49
+      }
+    },
+    {
+      "day": 6,
+      "distinct_colours": 6,
+      "colours_with_at_least_3_cells": 4,
+      "dominant_colour_cells": 61,
+      "dominant_colour_fraction": 0.7531,
+      "counts": {
+        "C00": 7,
+        "C01": 1,
+        "C04": 61,
+        "C05": 6,
+        "C07": 4,
+        "C08": 2
+      }
+    },
+    {
+      "day": 7,
+      "distinct_colours": 7,
+      "colours_with_at_least_3_cells": 6,
+      "dominant_colour_cells": 51,
+      "dominant_colour_fraction": 0.6296,
+      "counts": {
+        "C00": 8,
+        "C04": 12,
+        "C05": 3,
+        "C06": 3,
+        "C07": 3,
+        "C09": 51,
+        "C12": 1
+      }
+    },
+    {
+      "day": 8,
+      "distinct_colours": 6,
+      "colours_with_at_least_3_cells": 4,
+      "dominant_colour_cells": 47,
+      "dominant_colour_fraction": 0.5802,
+      "counts": {
+        "C04": 15,
+        "C05": 7,
+        "C06": 1,
+        "C07": 9,
+        "C08": 47,
+        "C12": 2
+      }
+    },
+    {
+      "day": 9,
+      "distinct_colours": 5,
+      "colours_with_at_least_3_cells": 3,
+      "dominant_colour_cells": 44,
+      "dominant_colour_fraction": 0.5432,
+      "counts": {
+        "C00": 2,
+        "C02": 44,
+        "C07": 31,
+        "C08": 3,
+        "C11": 1
+      }
+    },
+    {
+      "day": 10,
+      "distinct_colours": 5,
+      "colours_with_at_least_3_cells": 5,
+      "dominant_colour_cells": 51,
+      "dominant_colour_fraction": 0.6296,
+      "counts": {
+        "C00": 51,
+        "C06": 3,
+        "C07": 6,
+        "C08": 17,
+        "C09": 4
+      }
+    },
+    {
+      "day": 11,
+      "distinct_colours": 4,
+      "colours_with_at_least_3_cells": 4,
+      "dominant_colour_cells": 45,
+      "dominant_colour_fraction": 0.5556,
+      "counts": {
+        "C00": 15,
+        "C07": 4,
+        "C08": 17,
+        "C09": 45
+      }
+    },
+    {
+      "day": 12,
+      "distinct_colours": 8,
+      "colours_with_at_least_3_cells": 5,
+      "dominant_colour_cells": 44,
+      "dominant_colour_fraction": 0.5432,
+      "counts": {
+        "C00": 14,
+        "C02": 44,
+        "C06": 4,
+        "C07": 2,
+        "C08": 10,
+        "C09": 2,
+        "C11": 1,
+        "C12": 4
+      }
+    },
+    {
+      "day": 13,
+      "distinct_colours": 4,
+      "colours_with_at_least_3_cells": 3,
+      "dominant_colour_cells": 59,
+      "dominant_colour_fraction": 0.7284,
+      "counts": {
+        "C04": 59,
+        "C05": 6,
+        "C06": 15,
+        "C11": 1
+      }
+    },
+    {
+      "day": 14,
+      "distinct_colours": 6,
+      "colours_with_at_least_3_cells": 4,
+      "dominant_colour_cells": 48,
+      "dominant_colour_fraction": 0.5926,
+      "counts": {
+        "C00": 48,
+        "C07": 14,
+        "C08": 2,
+        "C09": 6,
+        "C11": 1,
+        "C12": 10
+      }
+    },
+    {
+      "day": 15,
+      "distinct_colours": 4,
+      "colours_with_at_least_3_cells": 4,
+      "dominant_colour_cells": 47,
+      "dominant_colour_fraction": 0.5802,
+      "counts": {
+        "C00": 8,
+        "C05": 22,
+        "C08": 47,
+        "C09": 4
+      }
+    },
+    {
+      "day": 16,
+      "distinct_colours": 4,
+      "colours_with_at_least_3_cells": 3,
+      "dominant_colour_cells": 50,
+      "dominant_colour_fraction": 0.6173,
+      "counts": {
+        "C00": 50,
+        "C03": 20,
+        "C06": 2,
+        "C09": 9
+      }
+    },
+    {
+      "day": 17,
+      "distinct_colours": 4,
+      "colours_with_at_least_3_cells": 4,
+      "dominant_colour_cells": 41,
+      "dominant_colour_fraction": 0.5062,
+      "counts": {
+        "C00": 9,
+        "C06": 22,
+        "C07": 9,
+        "C08": 41
+      }
+    },
+    {
+      "day": 18,
+      "distinct_colours": 5,
+      "colours_with_at_least_3_cells": 5,
+      "dominant_colour_cells": 40,
+      "dominant_colour_fraction": 0.4938,
+      "counts": {
+        "C00": 25,
+        "C02": 9,
+        "C07": 4,
+        "C08": 3,
+        "C09": 40
+      }
+    },
+    {
+      "day": 19,
+      "distinct_colours": 6,
+      "colours_with_at_least_3_cells": 5,
+      "dominant_colour_cells": 52,
+      "dominant_colour_fraction": 0.642,
+      "counts": {
+        "C02": 52,
+        "C04": 7,
+        "C05": 7,
+        "C08": 4,
+        "C09": 10,
+        "C12": 1
+      }
+    },
+    {
+      "day": 20,
+      "distinct_colours": 7,
+      "colours_with_at_least_3_cells": 6,
+      "dominant_colour_cells": 48,
+      "dominant_colour_fraction": 0.5926,
+      "counts": {
+        "C00": 2,
+        "C01": 9,
+        "C04": 48,
+        "C06": 4,
+        "C07": 10,
+        "C08": 5,
+        "C12": 3
+      }
+    },
+    {
+      "day": 21,
+      "distinct_colours": 3,
+      "colours_with_at_least_3_cells": 3,
+      "dominant_colour_cells": 58,
+      "dominant_colour_fraction": 0.716,
+      "counts": {
+        "C00": 16,
+        "C07": 7,
+        "C08": 58
+      }
+    },
+    {
+      "day": 22,
+      "distinct_colours": 6,
+      "colours_with_at_least_3_cells": 4,
+      "dominant_colour_cells": 56,
+      "dominant_colour_fraction": 0.6914,
+      "counts": {
+        "C00": 56,
+        "C04": 11,
+        "C06": 1,
+        "C09": 6,
+        "C11": 2,
+        "C12": 5
+      }
+    },
+    {
+      "day": 23,
+      "distinct_colours": 7,
+      "colours_with_at_least_3_cells": 5,
+      "dominant_colour_cells": 53,
+      "dominant_colour_fraction": 0.6543,
+      "counts": {
+        "C00": 1,
+        "C02": 53,
+        "C06": 9,
+        "C07": 6,
+        "C08": 8,
+        "C10": 1,
+        "C12": 3
+      }
+    },
+    {
+      "day": 24,
+      "distinct_colours": 6,
+      "colours_with_at_least_3_cells": 3,
+      "dominant_colour_cells": 50,
+      "dominant_colour_fraction": 0.6173,
+      "counts": {
+        "C00": 3,
+        "C02": 1,
+        "C03": 24,
+        "C06": 2,
+        "C07": 1,
+        "C09": 50
+      }
+    },
+    {
+      "day": 25,
+      "distinct_colours": 4,
+      "colours_with_at_least_3_cells": 4,
+      "dominant_colour_cells": 41,
+      "dominant_colour_fraction": 0.5062,
+      "counts": {
+        "C00": 17,
+        "C04": 41,
+        "C06": 6,
+        "C09": 17
+      }
+    }
+  ]
+}

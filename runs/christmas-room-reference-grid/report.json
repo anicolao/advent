@@ -1,0 +1,32 @@
+{
+  "16": {
+    "reference_points_per_sheet": 256,
+    "total_segments": 2557,
+    "collapsed_segments": 1870,
+    "active_points_range": [
+      50,
+      134
+    ],
+    "max_displacement": 14.142
+  },
+  "31": {
+    "reference_points_per_sheet": 961,
+    "total_segments": 3694,
+    "collapsed_segments": 842,
+    "active_points_range": [
+      66,
+      197
+    ],
+    "max_displacement": 7.071
+  },
+  "61": {
+    "reference_points_per_sheet": 3721,
+    "total_segments": 4348,
+    "collapsed_segments": 221,
+    "active_points_range": [
+      77,
+      224
+    ],
+    "max_displacement": 3.536
+  }
+}

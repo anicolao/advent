@@ -1,0 +1,44 @@
+{
+  "unit_tests": 21,
+  "unit_test_status": "passed",
+  "browser_status": "passed",
+  "viewport_sizes_tested": [
+    [
+      1440,
+      900
+    ],
+    [
+      1280,
+      720
+    ],
+    [
+      1024,
+      768
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      844,
+      390
+    ]
+  ],
+  "browser_days_tested": [
+    1,
+    13,
+    25
+  ],
+  "pdf_page_counts": {
+    "puzzles": 25,
+    "stroke-guides": 25,
+    "solutions": 25,
+    "assembly": 1
+  },
+  "visual_review": [
+    "25 completed daily crops",
+    "assembled scene",
+    "viewport-sized browser preview"
+  ],
+  "concealment_blind_review": "pending human review"
+}
