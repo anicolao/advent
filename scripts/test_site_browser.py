@@ -21,13 +21,12 @@ class Handler(SimpleHTTPRequestHandler):
     def do_GET(self):
         if self.path.startswith('/advent/'):
             self.path=self.path[len('/advent'):]
-            try:return super().do_GET()
-            except (BrokenPipeError,ConnectionResetError):return
-        self.send_error(404)
+        try:return super().do_GET()
+        except (BrokenPipeError,ConnectionResetError):return
     def log_message(self,*args):pass
 server=ThreadingHTTPServer(('127.0.0.1',0),Handler)
 Thread(target=server.serve_forever,daemon=True).start()
-BASE=f'http://127.0.0.1:{server.server_port}/advent/'
+BASE=f'http://127.0.0.1:{server.server_port}/'
 CHROME='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 
 with tempfile.TemporaryDirectory(prefix='dot-browser-') as profile:
@@ -122,12 +121,17 @@ with tempfile.TemporaryDirectory(prefix='dot-browser-') as profile:
         navigate('2026/print/?from=20&to=1&mode=art','document.readyState === "complete"')
         assert js('document.getElementById("print").hidden')
         assert js('document.querySelectorAll(".print-sheet").length')==0
-        navigate('experiments/','document.querySelectorAll(".archive-card").length>0')
-        links=js('Array.from(document.querySelectorAll(".archive-card a")).map(a=>a.href)')
-        for link in links:
-            assert urllib.request.urlopen(link).status==200
-        (OUT/'experiments.png').write_bytes(base64.b64decode(call('Page.captureScreenshot',{'format':'png'})['data']))
-        print(f'Passed: 25 deep links, exact Sudoku answers, explicit spoilers, all drawing modes, {len(links)} archive previews, mobile layout, print form and 3/3/25-page PDFs at six-inch scale.')
+        for path in ('', '2026/', '2026/day/01/', 'experiments/'):
+            navigate(path, 'document.readyState === "complete"')
+            assert not js('Array.from(document.querySelectorAll("a")).some(a=>/\\/(experiments|runs)\\//.test(a.href))')
+        links=json.load(urllib.request.urlopen(BASE+'links/2026-days.json'))
+        assert len(links)==25
+        for day,link in enumerate(links,1):
+            assert link=={'day':day,'url':f'https://advent.annasdadpress.com/2026/day/{day:02}/'}
+        # Relative assets also survive the old project-prefix layout.
+        navigate('advent/2026/day/01/', 'Boolean(window.advent) && document.getElementById("tileImage").naturalWidth>0')
+        assert js('document.querySelector("link[rel=canonical]").href')==links[0]['url']
+        print('Passed: 25 deep links, exact Sudoku answers, explicit spoilers, all drawing modes, no experiment navigation, QR targets, both host layouts, mobile layout, print form and 3/3/25-page PDFs at six-inch scale.')
         connection.close()
     finally:
         process.terminate()

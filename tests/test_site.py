@@ -1,10 +1,11 @@
+import csv
 import hashlib
 import json
 from pathlib import Path
 import unittest
 import xml.etree.ElementTree as ET
 
-from scripts.build_site import decode, paths, tile_svg
+from scripts.build_site import CANONICAL_ORIGIN, decode, paths, tile_svg
 from dot_to_dot.numbered_grid import solve
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -15,6 +16,14 @@ class FrozenAdventTest(unittest.TestCase):
     def setUpClass(cls):
         cls.path=ROOT/'editions/2026/calendar.json'
         cls.data=json.loads(cls.path.read_text())
+
+    def test_permanent_qr_targets(self):
+        expected=[{'day':day,'url':f'{CANONICAL_ORIGIN}/2026/day/{day:02}/'} for day in range(1,26)]
+        self.assertEqual(json.loads((ROOT/'links/2026-days.json').read_text()),expected)
+        with (ROOT/'links/2026-days.csv').open(newline='') as f:
+            rows=[{'day':int(row['day']),'url':row['url']} for row in csv.DictReader(f)]
+        self.assertEqual(rows,expected)
+        self.assertEqual((ROOT/'site/CNAME').read_text().strip(),'advent.annasdadpress.com')
 
     def test_snapshot_hash_and_day_order(self):
         provenance=json.loads((self.path.parent/'provenance.json').read_text())

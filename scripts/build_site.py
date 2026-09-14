@@ -1,5 +1,6 @@
 """Dependency-free static Pages build from the frozen annual editions."""
 import argparse
+import csv
 import hashlib
 import html
 import json
@@ -7,6 +8,7 @@ from pathlib import Path
 import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
+CANONICAL_ORIGIN = 'https://advent.annasdadpress.com'
 
 
 def decode(choice, inverse):
@@ -66,36 +68,6 @@ def scene_svg(days):
     return ''.join(out)+'</svg>'
 
 
-DESCRIPTIONS = {
-    'christmas-room-numbered-grid-v3': 'One number per dot, short connections and explicit joins. The final prototype before the book.',
-    'christmas-room-numbered-grid-v2': 'Exact junctions and short hops, with two numbers per dot.',
-    'christmas-room-numbered-grid': 'The first Sudoku lookup with numbered reference dots and decoy paths.',
-    'christmas-room-reference-grid': 'Uniform reference grids at three resolutions.',
-    'christmas-room-proof': 'The generated source and its actual vector reduction.',
-    'nativity-reduction-proof': 'A detailed nativity reduction trial that did not transfer well.',
-    'advent-organic-village': 'Twenty-five connected daily puzzles with more organic village forms.',
-    'advent-winter-village': 'The first complete advent village.',
-    'dot-to-dot-winter-window': 'An intricate window illustration with separate strokes.',
-    'dot-to-dot-winter-window-draft': 'An earlier window construction.',
-    'dot-to-dot-reindeer': 'An early silhouette experiment.',
-}
-
-
-def gallery():
-    cards = []
-    for folder in sorted((ROOT/'runs').iterdir()):
-        if not folder.is_dir():
-            continue
-        entry = next((f for f in ('index.html', 'assembly.html', 'instructions.html') if (folder/f).exists()), None)
-        if not entry:
-            continue
-        name = folder.name
-        title = name.replace('-', ' ').title()
-        description = DESCRIPTIONS.get(name, 'Marker-palette mosaic study. Compare the source, tile layout and finished artwork.')
-        cards.append(f'<article class="archive-card"><h2><a href="../runs/{name}/{entry}">{html.escape(title)}</a></h2><p>{html.escape(description)}</p></article>')
-    return ''.join(cards)
-
-
 def build(out):
     out.mkdir(parents=True, exist_ok=True)
     shutil.copytree(ROOT/'site', out, dirs_exist_ok=True,
@@ -106,14 +78,12 @@ def build(out):
     for name in ('runs', 'inputs', 'palettes'):
         shutil.copytree(ROOT/name, out/name, dirs_exist_ok=True,
                         ignore=shutil.ignore_patterns('__pycache__', '*.pyc', '.DS_Store'))
-    for path in ROOT.glob('*.md'):
-        shutil.copy2(path, out/path.name)
+    # Keep project history in Git rather than publishing another navigation surface.
+    for path in out.glob('*.md'):
+        path.unlink()
     for path in ROOT.glob('*art.png'):
         shutil.copy2(path, out/path.name)
     shutil.copy2(ROOT/'frixion.png', out/'frixion.png')
-    archive = out/'experiments/index.html'
-    archive.parent.mkdir(exist_ok=True)
-    archive.write_text((ROOT/'site/experiments/index.html').read_text().replace('__GALLERY__', gallery()))
     template = (ROOT/'site/annual.html').read_text()
     for edition in sorted((ROOT/'editions').iterdir()):
         data = json.loads((edition/'calendar.json').read_text())
@@ -125,7 +95,8 @@ def build(out):
         def page(folder, day, prefix):
             folder.mkdir(parents=True, exist_ok=True)
             boot = json.dumps(dict(year=data['year'],day=day,base=prefix))
-            content = template.replace('__BOOT__',boot).replace('__ASSET__',prefix+'../assets/').replace('__HOME__',prefix+'../').replace('__YEAR__',year)
+            canonical = f'{CANONICAL_ORIGIN}/{year}/'+(f'day/{day:02}/' if day else '')
+            content = template.replace('__BOOT__',boot).replace('__ASSET__',prefix+'../assets/').replace('__HOME__',prefix+'../').replace('__YEAR__',year).replace('__CANONICAL__',canonical)
             (folder/'index.html').write_text(content)
         page(dest, None, './')
         for day in data['days']:
@@ -137,6 +108,11 @@ def build(out):
         (dest/'scene.svg').write_text(scene_svg(data['days']))
         print_dir=dest/'print';print_dir.mkdir(exist_ok=True)
         (print_dir/'index.html').write_text((ROOT/'site/print.html').read_text().replace('__YEAR__',year))
+        link_rows = [{'day':d['day'],'url':f'{CANONICAL_ORIGIN}/{year}/day/{d["day"]:02}/'} for d in data['days']]
+        links_dir = out/'links';links_dir.mkdir(exist_ok=True)
+        with (links_dir/f'{year}-days.csv').open('w',newline='') as f:
+            writer=csv.DictWriter(f,fieldnames=['day','url']);writer.writeheader();writer.writerows(link_rows)
+        (links_dir/f'{year}-days.json').write_text(json.dumps(link_rows,indent=2)+'\n')
     (out/'.nojekyll').touch()
     print(f'Site built at {out}')
 

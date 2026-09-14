@@ -1,16 +1,17 @@
 # Advent on GitHub Pages
 
-The repository is `anicolao/advent`. Its Pages site has two separate purposes:
+The repository is `anicolao/advent`. Its reader-facing Pages site serves the finished calendar:
 
-- **`/advent/2026/`** is the durable companion to the finished Mathpub book, *25 Days of Christmas Sudoku*.
-- **`/advent/experiments/`** links all saved mosaic and dot-to-dot previews. These are historical trials, with their original artwork and numbering.
+- **`/2026/`** is the durable companion to the finished Mathpub book, *25 Days of Christmas Sudoku*.
+
+Historical experiment assets remain addressable for existing bookmarks, but there are no experiment links in the homepage, calendar, daily pages or retired archive landing page. Project history is retained in Git.
 
 ## Stable reader URLs
 
-- Calendar: `https://anicolao.github.io/advent/2026/`
-- Individual days: `https://anicolao.github.io/advent/2026/day/01/` through `day/25/`
-- Print selection: `https://anicolao.github.io/advent/2026/print/?from=1&to=25&mode=dots`
-- Drawing assets: `/advent/2026/tiles/01/dots.svg`, `art.svg`, and `solved.svg`.
+- Calendar: `https://advent.annasdadpress.com/2026/`
+- Individual days: `https://advent.annasdadpress.com/2026/day/01/` through `day/25/`
+- Print selection: `https://advent.annasdadpress.com/2026/print/?from=1&to=25&mode=dots`
+- Drawing assets: `/2026/tiles/01/dots.svg`, `art.svg`, and `solved.svg`.
 
 `dots` prints the numbered sheet; `art` prints only the finished line art and trim border; `solved` prints the finished drawing over the numbered sheet. The print view accepts any inclusive date range from 1–25. It waits for every SVG to load before enabling printing. The browser print dialog can also save a PDF.
 
@@ -56,7 +57,15 @@ For the local Chrome interaction and print check:
 nix develop -c python scripts/test_site_browser.py
 ```
 
-The test serves the site under `/advent/`, visits all 25 daily routes, checks exact Sudoku answers and explicit reveals, exercises all drawing modes, checks the experiment links and mobile layout, and exports 3/3/25-page print PDFs at the expected physical scale. Review screenshots and PDFs are saved under ignored `.site-review/`. Physical printer scaling still depends on the print-dialog settings.
+The test serves the site under `/`, visits all 25 daily routes, checks exact Sudoku answers and explicit reveals, exercises all drawing modes, checks that reader pages do not link to experiments, checks mobile layout, and exports 3/3/25-page print PDFs at the expected physical scale. Review screenshots and PDFs are saved under ignored `.site-review/`. Physical printer scaling still depends on the print-dialog settings.
+
+## Custom domain and QR targets
+
+The canonical host is `advent.annasdadpress.com`; paths do not contain the repository name `/advent/`. See [QR_LINKS.md](QR_LINKS.md) for the day-view URL contract and the 25-row CSV for book production.
+
+GitHub Pages is configured with this custom domain. Cloudflare has a DNS-only CNAME named `advent`, targeting `anicolao.github.io`, with a 300-second TTL. GitHub Pages provides the HTTPS certificate. Keep the GitHub domain setting and `site/CNAME` consistent; with an Actions deployment, the GitHub Pages setting controls domain binding.
+
+Cloudflare credentials are read locally from `.env`. `.env` and `.env.*` are ignored by Git and excluded from the allowlisted site build. They are not needed by the Pages workflow. Never paste credential values into commands, documentation or workflow files.
 
 ## Deploy
 
